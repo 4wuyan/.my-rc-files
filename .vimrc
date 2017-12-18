@@ -134,14 +134,11 @@
 "----------------------------------------------------------------------
 
     " Ensure the background is dark and using the best DESERT color scheme
-        if has('gui_running')
-            try
-                colorscheme desert
-            catch
-            endtry
-        else
-            set background=dark
-        endif
+        set background=dark
+        try
+            colorscheme desert
+        catch
+        endtry
 
     " Enable syntax highlighting
         if has("syntax")
@@ -161,4 +158,5 @@
         highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
         " The full version of the setting can be:
         "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-        highlight Comment ctermfg=DarkGrey guifg=DarkGrey
+        highlight Comment ctermfg=Grey guifg=Grey
+
