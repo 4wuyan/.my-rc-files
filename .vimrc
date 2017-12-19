@@ -132,31 +132,32 @@
 "----------------------------------------------------------------------
 " Colors
 "----------------------------------------------------------------------
+set background=light
 
-    " Ensure the background is dark and using the best DESERT color scheme
-        set background=dark
-        try
-            colorscheme desert
-        catch
-        endtry
-
-    " Enable syntax highlighting
-        if has("syntax")
-            syntax on
-        endif
-
-    " Hightlight trailing white spaces
-        " These settings might be overwritten by colorscheme command, so they are
-        " put after colorscheme settings.
-        " See http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-        " highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-        " match ExtraWhitespace /\s\+$/
-
-    " Change the colour of line numbers
-        " Make the line number colour less obtrusive.
-        " Should be placed after other color settings.
-        highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
-        " The full version of the setting can be:
-        "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-        highlight Comment ctermfg=Grey guifg=Grey
-
+"    " Ensure the background is dark and using the best DESERT color scheme
+"        set background=dark
+"        try
+"            colorscheme desert
+"        catch
+"        endtry
+"
+"    " Enable syntax highlighting
+"        if has("syntax")
+"            syntax on
+"        endif
+"
+"    " Hightlight trailing white spaces
+"        " These settings might be overwritten by colorscheme command, so they are
+"        " put after colorscheme settings.
+"        " See http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+"        " highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+"        " match ExtraWhitespace /\s\+$/
+"
+"    " Change the colour of line numbers
+"        " Make the line number colour less obtrusive.
+"        " Should be placed after other color settings.
+"        highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
+"        " The full version of the setting can be:
+"        "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+"        highlight Comment ctermfg=Grey guifg=Grey
+"
