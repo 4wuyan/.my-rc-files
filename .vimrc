@@ -134,7 +134,8 @@
 "----------------------------------------------------------------------
 " Colors
 "----------------------------------------------------------------------
-set background=light
+
+    set background=light
 
 "    " Ensure the background is dark and using the best DESERT color scheme
 "        set background=dark
