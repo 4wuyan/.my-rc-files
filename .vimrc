@@ -4,7 +4,9 @@
 
     set nocompatible " Avoid using obsolete vi commands
     set number " Show line numbers on the left
-    set mouse=a " Scroll, and select without line number in xterm
+    if has("mouse")
+        set mouse=a " Scroll, and select without line number in xterm
+    endif
     set backspace=indent,eol,start " Make BACKSPACE act normally as it's expected
     set encoding=utf8
     set ruler
@@ -132,7 +134,6 @@
 "----------------------------------------------------------------------
 " Colors
 "----------------------------------------------------------------------
-
 set background=light
 
 "    " Ensure the background is dark and using the best DESERT color scheme
