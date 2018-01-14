@@ -5,7 +5,7 @@
     set nocompatible " Avoid using obsolete vi commands
     set number " Show line numbers on the left
     if has("mouse")
-        set mouse=a " Scroll, and select without line number in xterm
+        set mouse=n " Scroll, and select without line number in xterm
     endif
     set backspace=indent,eol,start " Make BACKSPACE act normally as it's expected
     set encoding=utf8
@@ -63,6 +63,11 @@
         endif
     endfunc
 
+    func! RunPyramid()
+        exec "w"
+        exec "call CleanScreen()"
+        exec "!~/env/bin/pserve ~/repos/s4m_pyramid/development.ini"
+    endfunc
     func! CompileCode()
         exec "w"
         exec "call CleanScreen()"
@@ -71,7 +76,7 @@
         elseif &filetype == "c"
             exec "!gcc % -o %<"
         elseif &filetype == "python"
-            exec "!python %"
+            exec "!~/env/bin/python3 %"
         elseif &filetype == "java"
             exec "!javac %"
         elseif &filetype == "haskell"
@@ -99,7 +104,7 @@
     imap <F5> <ESC>:call CompileCode()<CR>
     vmap <F5> <ESC>:call CompileCode()<CR>
 
-    map <F6> :call RunResult()<CR>
+    map <F6> :call RunPyramid()<CR>
 
 "----------------------------------------------------------------------
 " GUI Settings
@@ -135,32 +140,32 @@
 " Colors
 "----------------------------------------------------------------------
 
-    set background=light
+    set background=dark
 
-"    " Ensure the background is dark and using the best DESERT color scheme
-"        set background=dark
-"        try
-"            colorscheme desert
-"        catch
-"        endtry
-"
-"    " Enable syntax highlighting
-"        if has("syntax")
-"            syntax on
-"        endif
-"
-"    " Hightlight trailing white spaces
-"        " These settings might be overwritten by colorscheme command, so they are
-"        " put after colorscheme settings.
-"        " See http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-"        " highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-"        " match ExtraWhitespace /\s\+$/
-"
-"    " Change the colour of line numbers
-"        " Make the line number colour less obtrusive.
-"        " Should be placed after other color settings.
-"        highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
-"        " The full version of the setting can be:
-"        "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-"        highlight Comment ctermfg=Grey guifg=Grey
-"
+    " Ensure the background is dark and using the best DESERT color scheme
+        set background=dark
+        try
+            colorscheme desert
+        catch
+        endtry
+
+    " Enable syntax highlighting
+        if has("syntax")
+            syntax on
+        endif
+
+    " Hightlight trailing white spaces
+        " These settings might be overwritten by colorscheme command, so they are
+        " put after colorscheme settings.
+        " See http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+        " highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+        " match ExtraWhitespace /\s\+$/
+
+    " Change the colour of line numbers
+        " Make the line number colour less obtrusive.
+        " Should be placed after other color settings.
+        highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
+        " The full version of the setting can be:
+        "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+        highlight Comment ctermfg=DarkGrey guifg=DarkGrey
+
