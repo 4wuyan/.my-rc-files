@@ -10,8 +10,8 @@ fi
 
 # User specific aliases and functions
 
-alias run="~/env/bin/pserve ~/repos/s4m_pyramid/development.ini --reload"
-alias update="~/env/bin/pip install -e  ~/repos/s4m_pyramid/"
+alias run="pserve ~/repos/s4m_pyramid/development.ini --reload"
+alias update="pip install -e  ~/repos/s4m_pyramid/"
 
 # Git branch in prompt.
 parse_git_branch() {

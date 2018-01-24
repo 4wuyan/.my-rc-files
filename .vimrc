@@ -66,7 +66,7 @@
     func! RunPyramid()
         exec "w"
         exec "call CleanScreen()"
-        exec "!~/env/bin/pserve ~/repos/s4m_pyramid/development.ini"
+        exec "!run"
     endfunc
     func! CompileCode()
         exec "w"
@@ -76,7 +76,7 @@
         elseif &filetype == "c"
             exec "!gcc % -o %<"
         elseif &filetype == "python"
-            exec "!~/env/bin/python3 %"
+            exec "!python %"
         elseif &filetype == "java"
             exec "!javac %"
         elseif &filetype == "haskell"
