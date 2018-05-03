@@ -63,11 +63,6 @@
         endif
     endfunc
 
-    func! RunPyramid()
-        exec "w"
-        exec "call CleanScreen()"
-        exec "!run"
-    endfunc
     func! CompileCode()
         exec "w"
         exec "call CleanScreen()"
@@ -102,7 +97,7 @@
     imap <F5> <ESC>:call CompileCode()<CR>
     vmap <F5> <ESC>:call CompileCode()<CR>
 
-    map <F6> :call RunPyramid()<CR>
+    map <F6> :call RunResult()<CR>
 
 "----------------------------------------------------------------------
 " GUI Settings
