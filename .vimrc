@@ -5,7 +5,7 @@
 set nocompatible " Avoid using obsolete vi commands
 set number " Show line numbers on the left
 if has("mouse")
-    set mouse=n " Scroll, and select without line number in xterm
+    set mouse=a " Scroll, and select without line number in xterm
 endif
 set backspace=indent,eol,start " Make BACKSPACE act normally as it's expected
 set encoding=utf8
@@ -116,23 +116,11 @@ if has('gui_running')
     elseif WINDOWS()
         set guifont=Andale_Mono:h14,Menlo:h14,Consolas:h13,Courier_New:h14
     endif
-else
-    if &term == 'xterm' || &term == 'screen'
-        set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-    endif
-    " set term=builtin_ansi       " Make arrow and other keys work
 endif
 
 "----------------------------------------------------------------------
 " Colors
 "----------------------------------------------------------------------
-" Ensure the background is dark and using the best DESERT color scheme
-set background=dark
-try
-    colorscheme desert
-catch
-endtry
-
 " Enable syntax highlighting
 if has("syntax")
     syntax on
