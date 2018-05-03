@@ -94,9 +94,7 @@
         elseif &filetype == "python"
             exec "!python %"
         elseif &filetype == "java"
-            "exec "!java %<"
             exec "!java %:t:r"
-                "This version fixes the problem in vim ./Something.java
         endif
     endfunc
 
@@ -139,9 +137,6 @@
 "----------------------------------------------------------------------
 " Colors
 "----------------------------------------------------------------------
-
-    set background=dark
-
     " Ensure the background is dark and using the best DESERT color scheme
         set background=dark
         try
