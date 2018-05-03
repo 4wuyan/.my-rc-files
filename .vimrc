@@ -43,19 +43,8 @@ set autoindent " for those filetypes whose plugins don't indent smartly
 "----------------------------------------------------------------------
 
 " See http://blog.chinaunix.net/uid-21202106-id-2406761.html
-func! CleanScreen()
-    if !has('gui_running')
-        if WINDOWS()
-            exec "silent !cls"
-        else
-            exec "silent !clear"
-        endif
-    endif
-endfunc
-
 func! CompileCode()
     exec "w"
-    exec "call CleanScreen()"
     if &filetype == "cpp"
         exec "!g++ % -o %<"
     elseif &filetype == "c"
@@ -71,7 +60,6 @@ endfunc
 
 func! RunResult()
     exec "w"
-    exec "call CleanScreen()"
     if &filetype == "cpp"
         exec "! ./%<"
     elseif &filetype == "c"
@@ -97,6 +85,9 @@ map <F6> :call RunResult()<CR>
 
 " GVIM- (here instead of .gvimrc)
 if has('gui_running')
+    set background=dark
+    colorscheme desert
+
     silent function! OSX()
         return has('macunix')
     endfunction
