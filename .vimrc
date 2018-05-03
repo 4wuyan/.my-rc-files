@@ -121,12 +121,6 @@
         elseif WINDOWS()
             set guifont=Andale_Mono:h14,Menlo:h14,Consolas:h13,Courier_New:h14
         endif
-
-        " Map Ctrl-C, Ctrl-V, Ctrl-X
-        vmap <C-c> "+y
-        vmap <C-x> "+d
-        vmap <C-v> c<ESC>"+p
-        imap <C-v> <C-r><C-o>+
     else
         if &term == 'xterm' || &term == 'screen'
             set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
