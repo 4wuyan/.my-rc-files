@@ -3,7 +3,7 @@
 "----------------------------------------------------------------------
 
 set nocompatible " Avoid using obsolete vi commands
-set number " Show line numbers on the left
+" set number " Show line numbers on the left
 if has("mouse")
     set mouse=a " Scroll, and select without line number in xterm
 endif
@@ -85,7 +85,6 @@ map <F6> :call RunResult()<CR>
 
 " GVIM- (here instead of .gvimrc)
 if has('gui_running')
-    set background=dark
     colorscheme desert
 
     silent function! OSX()
@@ -112,6 +111,7 @@ endif
 "----------------------------------------------------------------------
 " Colors
 "----------------------------------------------------------------------
+set background=dark
 " Enable syntax highlighting
 if has("syntax")
     syntax on
@@ -127,8 +127,8 @@ endif
 " Change the colour of line numbers
     " Make the line number colour less obtrusive.
     " Should be placed after other color settings.
-    highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
+    highlight LineNr ctermfg=Grey guifg=Grey
     " The full version of the setting can be:
     "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-    highlight Comment ctermfg=DarkGrey guifg=DarkGrey
+    highlight Comment ctermfg=DarkGrey guifg=Grey
 
