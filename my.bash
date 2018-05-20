@@ -1,5 +1,5 @@
 # My own custom bash settings
-# Add "source ~/.bashrc_" or ". ~/.bashrc_" in .bashrc
+# Add "source %file%" or ". %file%" in .bashrc
 
 # alias
 alias vi='vim'
