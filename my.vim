@@ -99,7 +99,12 @@ if has('gui_running')
         return  (has('win32') || has('win64'))
     endfunction
 
-    set guioptions-=T           " Remove the toolbar
+    " http://vim.wikia.com/wiki/Hide_toolbar_or_menus_to_see_more_text
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=L  "remove left-hand scroll bar
+
     "set lines=40                " 40 lines of text instead of 24
     if LINUX()
         set guifont=Andale\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
@@ -132,5 +137,5 @@ endif
     highlight LineNr ctermfg=Grey guifg=Grey
     " The full version of the setting can be:
     "highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-    highlight Comment ctermfg=DarkGrey guifg=Grey
+    highlight Comment ctermfg=Grey guifg=Grey
 
