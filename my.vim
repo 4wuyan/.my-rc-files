@@ -20,6 +20,10 @@ if has("patch-7.4.354")
     set breakindent
 endif
 
+" Jump to the last position when reopening a file (:help last-position-jump)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+
 "----------------------------------------------------------------------
 " Text, tab and indent related
 "----------------------------------------------------------------------
