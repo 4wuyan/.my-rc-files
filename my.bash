@@ -3,6 +3,7 @@
 
 # alias
 alias vi='vim'
+alias ls='ls --color=auto'
 
 # Git branch in prompt.
 parse_git_branch() {
