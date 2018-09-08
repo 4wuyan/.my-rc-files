@@ -1,0 +1,13 @@
+# Put this in ~/.gitconfig
+# [include]
+#     path = ~/.my-rc-files/.gitconfig
+
+[core]
+    editor = vim
+[color "status"]
+    changed = red bold
+    untracked = red bold
+    added = green bold
+[user]
+    email = 4wuyan@gmail.com
+    name = WU Yan
