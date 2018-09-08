@@ -116,6 +116,7 @@ if has('gui_running')
         set guifont=Andale\ Mono\ Regular:h12,Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14
     elseif WINDOWS()
         set guifont=Andale_Mono:h14,Menlo:h14,Consolas:h13,Courier_New:h14
+        set guifontwide=nsimsun
     endif
 endif
 
