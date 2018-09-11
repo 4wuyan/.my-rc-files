@@ -15,5 +15,5 @@
     added = green bold
 
 [color "diff"]
-    old = green bold
-    new = red bold
+    new = green bold
+    old = red bold
