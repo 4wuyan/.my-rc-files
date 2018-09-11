@@ -2,12 +2,18 @@
 # [include]
 #     path = ~/.my-rc-files/.gitconfig
 
+[user]
+    email = 4wuyan@gmail.com
+    name = WU Yan
+
 [core]
     editor = vim
+
 [color "status"]
     changed = red bold
     untracked = red bold
     added = green bold
-[user]
-    email = 4wuyan@gmail.com
-    name = WU Yan
+
+[color "diff"]
+    old = green bold
+    new = red bold
