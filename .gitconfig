@@ -17,3 +17,6 @@
 [color "diff"]
     new = green bold
     old = red bold
+
+[color "branch"]
+    upstream = bold blue
