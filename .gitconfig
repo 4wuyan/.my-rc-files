@@ -19,5 +19,6 @@
     old = red bold
 
 [color "branch"]
-    upstream = bold blue
+    upstream = blue bold
     remote = red bold
+    current = green bold
