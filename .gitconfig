@@ -13,6 +13,7 @@
     changed = red bold
     untracked = red bold
     added = green bold
+    nobranch=red bold
 
 [color "diff"]
     new = green bold
