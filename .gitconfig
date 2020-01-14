@@ -8,13 +8,14 @@
 
 [core]
     editor = vim
+    autocrlf = false
 
 [color "status"]
     changed = red bold
     untracked = red bold
     added = green bold
-    nobranch=red bold
-    unmerged=red bold
+    nobranch = red bold
+    unmerged = red bold
 
 [color "diff"]
     new = green bold
