@@ -17,3 +17,5 @@ if [ -f /etc/bash_completion.d/git ]; then
 elif [ -f /usr/share/bash-completion/completions/git ]; then
     . /usr/share/bash-completion/completions/git
 fi
+
+stty -ixon  # Free Ctrl-S for forward-i-search
