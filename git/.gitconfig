@@ -6,3 +6,6 @@
 	editor = vim
 	autocrlf = false
 	eol = lf
+
+[pull]
+	ff = only
