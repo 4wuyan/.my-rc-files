@@ -6,19 +6,3 @@
 	editor = vim
 	autocrlf = false
 	eol = lf
-
-[color "status"]
-	changed = red bold
-	untracked = red bold
-	added = green bold
-	nobranch = red bold
-	unmerged = red bold
-
-[color "diff"]
-	new = green bold
-	old = red bold
-
-[color "branch"]
-	upstream = blue bold
-	remote = red bold
-	current = green bold
