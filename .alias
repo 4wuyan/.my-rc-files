@@ -1,0 +1,8 @@
+alias g='git'
+alias gs='git status'
+
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+
+alias v='vim'
