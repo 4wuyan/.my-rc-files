@@ -66,10 +66,9 @@ unset color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+    # The terminal driver starts processing after `\e]0;`,
+    # and uses everything up to `\a` as the terminal window title.
+    PS1="\[\e]0;\u@\h: \w\a\]$PS1" ;;
 esac
 
 
