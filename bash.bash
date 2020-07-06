@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+
+# ln -s <this_file> ~/.bashrc
+# or in ~/.bashrc
+# source <this_file>
+
 [ -z "$PS1" ] && return  # If not running interactively, don't do anything
 
 # ------------

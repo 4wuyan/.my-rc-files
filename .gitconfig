@@ -1,3 +1,8 @@
+# ln -s <this_file> ~/.gitconfig
+# or in ~/.gitconfig
+# [include]
+#     path = <this_file>
+
 [user]
 	email = 4wuyan@gmail.com
 	name = WU Yan
