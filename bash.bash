@@ -49,14 +49,6 @@ fi
 
 
 # ------------
-# Copy from Ubuntu
-# ------------
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-
-# ------------
 # PS1
 # ------------
 
@@ -93,3 +85,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+
+# ------------
+# Ubuntu specific
+# ------------
+
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+  # make less more friendly for non-text input files, see lesspipe(1)
