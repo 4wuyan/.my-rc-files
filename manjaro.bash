@@ -59,8 +59,6 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias cp="cp -i"                          # confirm before overwriting something
-
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo

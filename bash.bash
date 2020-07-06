@@ -23,12 +23,12 @@ HISTFILESIZE=100000
 # Aliases
 # ------------
 
+alias cp="cp --interactive"  # confirm if overwriting
 alias g='git status'
-
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
-
+alias mv="mv --interactive"  # confirm if overwriting
 alias v='vim'
 
 
