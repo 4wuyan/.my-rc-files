@@ -52,6 +52,7 @@ fi
 # PS1
 # ------------
 
+color_prompt=no
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
