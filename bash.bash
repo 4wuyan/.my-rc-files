@@ -55,7 +55,11 @@ fi
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set a fancy prompt (non-color, unless we know we "want" color)
+
+# ------------
+# PS1
+# ------------
+
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
@@ -74,6 +78,11 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+
+# ------------
+# Colors
+# ------------
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
