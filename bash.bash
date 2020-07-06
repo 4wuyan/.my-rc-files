@@ -24,7 +24,7 @@ HISTFILESIZE=100000
 # ------------
 
 alias cp="cp --interactive"  # confirm if overwriting
-alias g='git status'
+alias gs='git status'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
