@@ -4,9 +4,11 @@
 # or in ~/.config/fish/config.fish
 # source <this_file>
 
-alias cp="cp --interactive"  # confirm if overwriting
-alias g='git'
-alias gs='git status'
-alias l='ls -CF'
-alias mv="mv --interactive"  # confirm if overwriting
-alias v='vim'
+# Without --global, they'll be universal, and
+# will persist in ~/.config/fish/fish_variables after they are removed here
+abbr --add --global cp "cp --interactive"  # confirm if overwriting
+abbr --add --global g 'git'
+abbr --add --global gs 'git status'
+abbr --add --global l 'ls -CF'
+abbr --add --global mv "mv --interactive"  # confirm if overwriting
+abbr --add --global v 'vim'
