@@ -15,4 +15,5 @@ abbr --add --global v 'vim'
 if string match --quiet '*Windows' < /proc/sys/kernel/osrelease
 	abbr --add --global p 'powershell.exe'
 	abbr --add --global s 'smerge.exe .'
+	set --export DOCKER_HOST 'tcp://localhost:2375'
 end
