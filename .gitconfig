@@ -14,3 +14,9 @@
 
 [pull]
 	ff = only
+
+[rebase]
+	autoStash = true
+
+[merge]
+	autoStash = true
