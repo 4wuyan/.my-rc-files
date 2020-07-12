@@ -102,6 +102,14 @@ fi
 
 
 # ------------
+# WSL specific
+# ------------
+
+if [[ "$(< /proc/sys/kernel/osrelease)" == *Microsoft ]]; then
+  export DOCKER_HOST=tcp://localhost:2375
+fi
+
+# ------------
 # Handy functions
 # ------------
 
