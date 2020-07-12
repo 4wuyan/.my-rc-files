@@ -12,7 +12,7 @@ abbr --add --global gs 'git status'
 abbr --add --global l 'ls -CF'
 abbr --add --global mv "mv --interactive"  # confirm if overwriting
 abbr --add --global v 'vim'
-if string match --quiet '*Windows' < /proc/sys/kernel/osrelease
+if string match --quiet '*Microsoft' < /proc/sys/kernel/osrelease
 	abbr --add --global p 'powershell.exe'
 	abbr --add --global s 'smerge.exe .'
 	set --export DOCKER_HOST 'tcp://localhost:2375'
