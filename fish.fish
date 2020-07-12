@@ -12,5 +12,7 @@ abbr --add --global gs 'git status'
 abbr --add --global l 'ls -CF'
 abbr --add --global mv "mv --interactive"  # confirm if overwriting
 abbr --add --global v 'vim'
-abbr --add --global p 'powershell.exe'
-abbr --add --global s 'smerge.exe .'
+if string match --quiet '*Windows' < /proc/sys/kernel/osrelease
+	abbr --add --global p 'powershell.exe'
+	abbr --add --global s 'smerge.exe .'
+end
