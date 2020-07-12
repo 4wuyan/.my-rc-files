@@ -36,6 +36,7 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias mv="mv --interactive"  # confirm if overwriting
 alias v='vim'
+alias vi='vim'
 
 
 # ------------
