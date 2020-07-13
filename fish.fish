@@ -28,4 +28,5 @@ if string match --quiet '*Microsoft' < /proc/sys/kernel/osrelease
 	abbr --add --global p 'powershell.exe'
 	abbr --add --global s 'smerge.exe .'
 	set --export DOCKER_HOST 'tcp://localhost:2375'
+	if [ (umask) = '0000' ]; umask 0022; end
 end
