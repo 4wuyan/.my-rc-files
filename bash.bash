@@ -14,7 +14,6 @@ shopt -s checkwinsize  # check the window size after each command and,
   # if necessary, update the values of LINES and COLUMNS.
 stty -ixon  # Free Ctrl-S for forward-i-search
 shopt -s globstar  # enable **
-test -d /home/linuxbrew/.linuxbrew && eval $(SHELL=bash /home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 
 # ------------
@@ -111,6 +110,22 @@ if [[ "$(< /proc/sys/kernel/osrelease)" == *Microsoft ]]; then
   export DOCKER_HOST=tcp://localhost:2375
   if [[ "$(umask)" == "0000" ]]; then umask 0022; fi
 fi
+
+
+# ------------
+# Homebrew
+# ------------
+
+if [ -d /home/linuxbrew/.linuxbrew ]; then
+  # eval $(SHELL=bash /home/linuxbrew/.linuxbrew/bin/brew shellenv) is too slow!
+  export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+  export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+  export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+  export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+  export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+  export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH}";
+fi
+
 
 # ------------
 # Handy functions
