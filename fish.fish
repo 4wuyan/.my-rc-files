@@ -18,7 +18,7 @@ abbr --add --global vi 'vim'
 # Homebrew on Linux
 #------------------
 if [ -d /home/linuxbrew/.linuxbrew ]
-	eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+	eval (SHELL=fish /home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
 
 #------------------
