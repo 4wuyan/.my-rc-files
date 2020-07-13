@@ -11,7 +11,7 @@
 # ------------
 
 shopt -s checkwinsize  # check the window size after each command and,
-    # if necessary, update the values of LINES and COLUMNS.
+  # if necessary, update the values of LINES and COLUMNS.
 stty -ixon  # Free Ctrl-S for forward-i-search
 shopt -s globstar  # enable **
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -62,21 +62,21 @@ fi
 
 color_prompt=no
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+  xterm-color|*-256color) color_prompt=yes;;
 esac
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='\u@\h:\w\$ '
+  PS1='\u@\h:\w\$ '
 fi
 unset color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    # The terminal driver starts processing after `\e]0;`,
-    # and uses everything up to `\a` as the terminal window title.
-    PS1="\[\e]0;\u@\h: \w\a\]$PS1" ;;
+  # The terminal driver starts processing after `\e]0;`,
+  # and uses everything up to `\a` as the terminal window title.
+  PS1="\[\e]0;\u@\h: \w\a\]$PS1" ;;
 esac
 
 
@@ -85,13 +85,13 @@ esac
 # ------------
 
 if [ -x /usr/bin/dircolors ]; then
-    eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  alias dir='dir --color=auto'
+  alias vdir='vdir --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
 
@@ -117,36 +117,36 @@ fi
 # ------------
 
 colors() {
-	local fgc bgc vals seq0
+  local fgc bgc vals seq0
 
-	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
-	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
-	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
-	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
+  printf "Color escapes are %s\n" '\e[${value};...;${value}m'
+  printf "Values 30..37 are \e[33mforeground colors\e[m\n"
+  printf "Values 40..47 are \e[43mbackground colors\e[m\n"
+  printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
 
-	# foreground colors
-	for fgc in {30..37}; do
-		# background colors
-		for bgc in {40..47}; do
-			fgc=${fgc#37} # white
-			bgc=${bgc#40} # black
+  # foreground colors
+  for fgc in {30..37}; do
+    # background colors
+    for bgc in {40..47}; do
+      fgc=${fgc#37} # white
+      bgc=${bgc#40} # black
 
-			vals="${fgc:+$fgc;}${bgc}"
-			vals=${vals%%;}
-              # remove trailing `;`
-              # Now vals should be something like `31;41`, `32`
+      vals="${fgc:+$fgc;}${bgc}"
+      vals=${vals%%;}
+        # remove trailing `;`
+        # Now vals should be something like `31;41`, `32`
 
-			seq0="${vals:+\e[${vals}m}"
-			printf "  %-9s" "${seq0:-(default)}"
-			printf " ${seq0}TEXT\e[m"
-			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
-              # First test if `vals` is EMPTY. Returns "" if empty.
-              # If not empty, then test if `vals` is SET.
-              # If set, then append a `;`.
-              # Two tests are needed because ${vals+$vals;} returns ";" when vals=""
-		done
-		echo; echo
-	done
+      seq0="${vals:+\e[${vals}m}"
+      printf "  %-9s" "${seq0:-(default)}"
+      printf " ${seq0}TEXT\e[m"
+      printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
+        # First test if `vals` is EMPTY. Returns "" if empty.
+        # If not empty, then test if `vals` is SET.
+        # If set, then append a `;`.
+        # Two tests are needed because ${vals+$vals;} returns ";" when vals=""
+    done
+    echo; echo
+  done
 }
 
 # ex - archive extractor
@@ -158,7 +158,7 @@ ex ()
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
+      *.rar)       unrar x $1   ;;
       *.gz)        gunzip $1    ;;
       *.tar)       tar xf $1    ;;
       *.tbz2)      tar xjf $1   ;;
