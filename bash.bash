@@ -14,6 +14,7 @@ shopt -s checkwinsize  # check the window size after each command and,
     # if necessary, update the values of LINES and COLUMNS.
 stty -ixon  # Free Ctrl-S for forward-i-search
 shopt -s globstar  # enable **
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 
 # ------------

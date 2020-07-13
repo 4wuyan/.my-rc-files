@@ -15,6 +15,13 @@ abbr --add --global v 'vim'
 abbr --add --global vi 'vim'
 
 #------------------
+# Homebrew on Linux
+#------------------
+if [ -d /home/linuxbrew/.linuxbrew ]
+	eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+end
+
+#------------------
 # WSL specific
 #------------------
 if string match --quiet '*Microsoft' < /proc/sys/kernel/osrelease
