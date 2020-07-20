@@ -32,7 +32,14 @@ end
 #------------------
 if string match --quiet '*Microsoft' < /proc/sys/kernel/osrelease
 	abbr --add --global p 'powershell.exe'
-	abbr --add --global s 'smerge.exe .'
 	set --export DOCKER_HOST 'tcp://localhost:2375'
 	if [ (umask) = '0000' ]; umask 0022; end
+end
+
+#------------------
+# Machine specific
+#------------------
+if string match --quiet '*YWU*' < /proc/sys/kernel/hostname
+	abbr --add --global s 'smerge.exe .'
+	abbr --add --global auth 'make -C /c/Users/yan.wu/Music/wy-swiss-army-knife/aws-auth/'
 end
