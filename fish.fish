@@ -28,17 +28,17 @@ if [ -d /home/linuxbrew/.linuxbrew ]
 end
 
 #------------------
-# WSL specific
+# Environment specific
 #------------------
+
+# WSL
 if string match --quiet '*Microsoft' < /proc/sys/kernel/osrelease
 	abbr --add --global p 'powershell.exe'
 	set --export DOCKER_HOST 'tcp://localhost:2375'
 	if [ (umask) = '0000' ]; umask 0022; end
 end
 
-#------------------
-# Machine specific
-#------------------
+# Dell laptop
 if string match --quiet '*YWU*' < /proc/sys/kernel/hostname
 	abbr --add --global s 'smerge.exe .'
 	abbr --add --global auth 'make -C /c/Users/yan.wu/Music/wy-swiss-army-knife/aws-auth/'
