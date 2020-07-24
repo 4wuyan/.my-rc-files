@@ -41,5 +41,7 @@ end
 # Dell laptop
 if string match --quiet '*YWU*' < /proc/sys/kernel/hostname
 	abbr --add --global s 'smerge.exe .'
-	abbr --add --global auth 'make -C /c/Users/yan.wu/Music/wy-swiss-army-knife/aws-auth/'
+	abbr --add --global auth 'make -C /c/Users/yan.wu/Music/wy-swiss-army-knife/make-aws/ technet'
+	abbr --add --global create-workbox 'make -C /c/Users/yan.wu/Music/wy-swiss-army-knife/make-aws/ workbox'
+	abbr --add --global tunnel 'powershell.exe /Users/yan.wu/Music/wy-swiss-army-knife/create-tunnel.ps1'
 end
