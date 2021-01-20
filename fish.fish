@@ -41,8 +41,9 @@ end
 # Dell laptop
 if string match --quiet '*YWU*' < /proc/sys/kernel/hostname
 	abbr --add --global s 'smerge.exe .'
-	abbr --add --global ma 'make -C /c/Users/yan.wu/Music/wy-swiss-army-knife/make-aws/'
+	abbr --add --global ma '/c/Users/yan.wu/Music/wy-swiss-army-knife/make-aws/run'
 	abbr --add --global tunnel 'powershell.exe /Users/yan.wu/Music/wy-swiss-army-knife/create-tunnel.ps1'
-	abbr --add --global update-conan-ips-server 'powershell.exe "cd /Users/yan.wu/Music/ips-server/IpsServer; conan install --update --settings arch=x86_64 --settings build_type=Debug --settings compiler.runtime=MDd --settings compiler.toolset=v140 ."'
-	abbr --add --global update-conan-ips-server-release 'powershell.exe "cd /Users/yan.wu/Music/ips-server/IpsServer; conan install --update --settings arch=x86_64 --settings build_type=Release --settings compiler.runtime=MD --settings compiler.toolset=v140 /Users/yan.wu/Music/ips-server/IpsServer"'
+	function jira
+		"/c/Program Files/Mozilla Firefox/firefox.exe" https://jira.iress.com/browse/IPSX-$argv
+	end
 end
