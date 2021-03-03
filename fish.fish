@@ -41,6 +41,7 @@ end
 # Dell laptop
 if string match --quiet '*YWU*' < /proc/sys/kernel/hostname
 	abbr --add --global s 'smerge.exe .'
+	abbr --add --global gb '/c/Program\ Files/Git/bin/bash.exe'
 	abbr --add --global ma '/c/Users/yan.wu/Music/wy-swiss-army-knife/make-aws/run'
 	abbr --add --global tunnel 'powershell.exe /Users/yan.wu/Music/wy-swiss-army-knife/create-tunnel.ps1'
 	function jira
